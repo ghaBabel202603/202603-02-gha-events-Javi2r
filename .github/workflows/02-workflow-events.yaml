@@ -1,0 +1,12 @@
+ name: my-workflow
+on: [push]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo “Hello world”
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo “bye Word”
