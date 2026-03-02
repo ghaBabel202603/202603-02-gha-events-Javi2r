@@ -1,15 +1,12 @@
-name: 02 - Eventos
-on:
-  push:
-  pull_request:
-  schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+name: my-workflow
+on: [push]
 
 jobs:
-  echo:
+  job1:
     runs-on: ubuntu-latest
     steps:
-      - name: ShowTrigger
-        run: |
-          echo "Event name: ${{ github.event_name }}"
+      - run: echo “Hello world”
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo “bye Word”
